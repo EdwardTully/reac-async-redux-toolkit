@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import store from "./app/store"
+
+//to access store across the app, import Provider and set that its property to store = {store}
+//now the individual components can use hooks like useSelector and useDispatch to interact with the store.
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store = {store}>
     <App />
+    </Provider>
+    
   </React.StrictMode>
 );
 
