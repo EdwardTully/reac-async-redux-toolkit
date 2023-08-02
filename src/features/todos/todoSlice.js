@@ -10,13 +10,7 @@ const initialState = {
 export const fetchTodos = createAsyncThunk('todo/fetchTodos', ()=>{
     return axios
     .get('https://jsonplaceholder.typicode.com/todos')
-    .then(response=>response.data.map((todo)=>{
-        if(todo.completed === false){
-            return todo.title
-        }else{
-            return `***Thank you for completing: ${todo.title} User ${todo.userId}`
-        }
-    }))
+    .then(response=>response.data)
 })
 
 

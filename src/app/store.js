@@ -8,7 +8,7 @@ import albumsReducer from '../features/albums/albumsSlice'
 
 const store = configureStore({
     reducer: {
-        user : userReducer,
+        users : userReducer,
         todos : todosReducer,
         company: companyReducer,
         posts: postsReducer,
