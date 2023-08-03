@@ -15,7 +15,8 @@ function TodosView() {
   const todoData = useSelector((state) => state.todos);
 
   //prefiltering todoData to create data sets that are complete or uncomplete, this was the easiest way for me to manage
-  //this since I couldnt do it with .map
+  //this since I couldnt do it with .map.  interestingly, using .fetch method allows to save data in a variable, which would have
+  //changed how i could have approached this.
 
   const unFinishedTodos = todoData.todos.filter((ea)=>{
     if(ea.completed===false){
