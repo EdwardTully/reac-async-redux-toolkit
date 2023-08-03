@@ -11,7 +11,7 @@ function App() {
   return (
     
     <div className="App">
-      <h1>JSON Data, React, Redux-Toolkit</h1>
+      <h1>JSON Data, React, Redux-Toolkit, Axios</h1>
       <br></br>
       <CompanyView/>
       <UsersView/>
