@@ -16,12 +16,13 @@ function UsersView() {
 
   return (
     <div>
-      <h1>User List</h1>
+      <h2>User List</h2>
       {usersInfo.loading && <div>Loading...</div>}
       {!usersInfo.loading && usersInfo.error ? (
         <div>Error: {usersInfo.error}</div>
       ) : null}
       {!usersInfo.loading && usersInfo.users.length ? (
+        <div id='usersCont'>
         <ul>
           {usersInfo.users.map((ea) => (
             <li
@@ -29,6 +30,7 @@ function UsersView() {
             >{`${ea.name} can be reached by calling ${ea.phone} or by email at ${ea.email}`}</li>
           ))}
         </ul>
+        </div>
       ) : null}
     </div>
   );

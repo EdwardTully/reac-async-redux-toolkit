@@ -11,7 +11,7 @@ export const companyFetch = createAsyncThunk('company/companyFetch', ()=>{
     return axios
         .get('https://jsonplaceholder.typicode.com/users')
         .then(response=>
-            response.data.map((user)=> `${user.name} is from ${user.company.name} and is involved in ${user.company.catchPhrase}.`)
+            response.data
         )
 })
 

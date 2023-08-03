@@ -27,15 +27,17 @@ function AlbumView() {
   //can use ternary operators here.  There are 3 possible outcomes: loading, error, and data received.  the operator
   // is condition ? tooccuriftrue : tooccuriffalse.  the && is a logical AND operator and makes it so that both expressions must be truthy for it to proceed as truthy.  Note how the albums.map has moved to here from the slice.
     <div>
-        <h1>Album List</h1>
+        <h2>Album List</h2>
         {album.loading && <div>Loading...</div>}
         {!album.loading && album.error ? <div>Error: {album.error}</div>: null}
         {!album.loading && album.albums.length ? (
+          <div id='albCont'>
           <ul>
             {album.albums.map(ea=> (
               <li key={ea.id}>{`Provided by ${ea.userId}, entitled ${ea.title}`}</li>
             ))}
           </ul>
+          </div>
         ) :null }
        
     </div>   

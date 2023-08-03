@@ -2,37 +2,70 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  width: 70%;
+  margin: auto;
+  background-color: hsl(135, 3%, 70%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+div #bioBox {
+  width: 88%;
+  row-gap: 20px;
+  column-gap: 10px;
+  margin: auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+div #bioInfo {
+  width: 145px;
+  margin: auto;
+  font-size: 16px;
+  color: whitesmoke;
+}
+div #bioCard {
+  width: 170px;
+  height: 250px;
+
+  flex-direction: column;
+  margin: 5px;
+  background-color: hsla(160, 1%, 59%, 0.712);
+  display: flex;
+  justify-content: flex-start;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+div #usersCont {
+  width: 88%;
+  margin: auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 18px;
+}
+
+#usersCont ul {
+  width: 80%;
+  list-style-type: square;
+}
+#usersCont li {
+  margin-left: 25px;
+  text-align: left;
+}
+
+div #albCont {
+  width: 88%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
 }
-
-.App-link {
-  color: #61dafb;
+#albCont ul {
+  width: 80%;
+  margin: auto;
+  list-style-type: square;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#albCont li {
+  font-size: 15px;
+  text-align: left;
 }

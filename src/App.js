@@ -9,12 +9,16 @@ import UsersView from './features/users/UsersView';
 
 function App() {
   return (
+    
     <div className="App">
+      <h1>JSON Data, React, Redux-Toolkit</h1>
+      <br></br>
+      <CompanyView/>
       <UsersView/>
       <AlbumView/>
       <PostsView/>
       <TodosView/>
-      <CompanyView/>
+      
 
     </div>
   );
