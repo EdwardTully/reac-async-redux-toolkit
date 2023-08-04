@@ -13,18 +13,31 @@ function PostsView() {
 
   const postData = useSelector(state=>state.posts)
 
+  const userIdtoInclude = 1
+ 
+  const postDatafilt = postData.posts.filter((post)=>{
+    if(post.userId===userIdtoInclude){
+      return post
+    }
+  })
+
+  
+
 
   return (
-    <div>
-        <h1>Posts by user</h1>
+    <div id='postView'>
+        <h2>Posts by User {userIdtoInclude}</h2>
         {postData.loading && <div>Loading...</div>}
         {!postData.loading && postData.error ? <div>Error:{postData.error}</div> : null}
         {!postData.loading && postData.posts.length ? (
+          <div id='postCont'>
           <ul>
-            {postData.posts.map(ea => (
-              <li key= {ea.id}>{`Post number ${ea.id}, user responded with ${ea.body}`}</li>
+          {postDatafilt.map((ea) => (
+              <li key= {ea.id}>{`Post number ${ea.id}: ${ea.title}`}</li>
+             
             ))}
           </ul>
+          </div>
         ):null}
       
     </div>

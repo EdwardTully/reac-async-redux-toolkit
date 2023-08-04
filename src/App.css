@@ -3,9 +3,11 @@
 }
 
 .App {
-  width: 70%;
+  width: 60%;
   margin: auto;
-  background-color: hsl(135, 3%, 70%);
+  margin-top: 0px;
+  padding-top: 0px;
+  background-color: hsla(54, 82%, 70%, 0.275);
 }
 
 div #bioBox {
@@ -24,7 +26,7 @@ div #bioInfo {
   width: 145px;
   margin: auto;
   font-size: 16px;
-  color: whitesmoke;
+  color: rgb(19, 19, 19);
 }
 div #bioCard {
   width: 170px;
@@ -32,7 +34,7 @@ div #bioCard {
 
   flex-direction: column;
   margin: 5px;
-  background-color: hsla(160, 1%, 59%, 0.712);
+  background-color: hsla(152, 46%, 71%, 0.534);
   display: flex;
   justify-content: flex-start;
 }
@@ -68,4 +70,22 @@ div #albCont {
 #albCont li {
   font-size: 15px;
   text-align: left;
+}
+div #postView{
+  width: 50%;
+  margin-left: 0px;
+  border: 1px solid black;
+}
+div #postCont{
+  width: 90%;
+  margin-left: 0px;
+}
+#postCont ul{
+  width: 100%;
+  justify-content: left;
+}
+#postCont li{
+  text-align: left;
+  list-style-type: none;
+  padding: 5px;
 }
