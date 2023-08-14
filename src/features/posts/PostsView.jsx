@@ -21,7 +21,6 @@ function PostsView() {
     }
   })
 
-  
 
 
   return (
